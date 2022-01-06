@@ -5,7 +5,7 @@ module.exports = class ClearCommand extends BaseCommand {
     super('clear', 'moderations', []);
   }
 
-async run(client, msg, args) {
+async run(client, msg) {
   const args = msg.content
   .slice(prefix.length)
   .trim()
