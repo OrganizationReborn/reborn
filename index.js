@@ -1,4 +1,3 @@
-
 const { Client, Intents, MessageEmbed } = require('discord.js');
 const { registerCommands, registerEvents } = require('./utils/registry');
 require('dotenv').config();
@@ -25,9 +24,9 @@ client.once("ready", async ()=> {
     if(ver === "production") {
         client.user.setActivity(`in code land`, {type: "PLAYING"});
     }else{
-        client.user.setActivity(`over ${client.guilds.cache.size} server(s)`, {
-            type:"WATCHING",
-            status:"IDLE"
+        client.user.setActivity(`${client.prefix}h to start`, {
+            type:"PLAYING",
+            status:"ONLINE"
         });
     }
         console.log(`The prefix is ${client.prefix}`)
@@ -55,5 +54,4 @@ client.on('guildMemberRemove', member => {
   .setTimestamp()
 
   channel.send({embeds: [leave]});
-})
-
+});
