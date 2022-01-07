@@ -6,6 +6,7 @@ module.exports = class ClearCommand extends BaseCommand {
   }
 
 async run(client, msg) {
+  const prefix = "?"
   const args = msg.content
   .slice(prefix.length)
   .trim()
