@@ -7,7 +7,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 (async () => {
   client.commands = new Map();
   client.events = new Map();
-  client.prefix = process.env.DISCORD_BOT_PREFIX;
+  client.prefix = "?";
   await registerCommands(client, '../commands');
   await registerEvents(client, '../events');
   await client.login(process.env.DISCORD_BOT_TOKEN);
@@ -31,6 +31,7 @@ client.once("ready", async ()=> {
         });
     }
         console.log(`Logged in as ${client.user.tag}!`);
+        console.log(`The prefix is ${client.prefix}`)
 });
 
 client.on('guildMemberAdd', member => {
