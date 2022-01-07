@@ -30,7 +30,6 @@ client.once("ready", async ()=> {
             status:"IDLE"
         });
     }
-        console.log(`Logged in as ${client.user.tag}!`);
         console.log(`The prefix is ${client.prefix}`)
 });
 
