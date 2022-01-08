@@ -101,4 +101,4 @@ client.on("messageCreate", async (msg) => {
 
       msg.channel.send({embeds: [leaderboardembed]});
   }
-})
+});
