@@ -2,6 +2,12 @@ const { Client, Intents, MessageEmbed } = require('discord.js');
 const { registerCommands, registerEvents } = require('./utils/registry');
 require('dotenv').config();
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_VOICE_STATES], partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://reborn:09984646539@reborn.8szbn.mongodb.net/test', {useUnifiedTopology: true, useNewUrlParser: true})
+
+const Levels = require("discord.js-leveling");
+Levels.setURL("mongodb+srv://reborn:09984646539@reborn.8szbn.mongodb.net/test");
+var xpRequired = Levels.xpFor(30);
 
 (async () => {
   client.commands = new Map();
@@ -55,3 +61,44 @@ client.on('guildMemberRemove', member => {
 
   channel.send({embeds: [leave]});
 });
+
+client.on("messageCreate", async (msg) => {
+  if(!msg.guild) return;
+  if(msg.author.bot) return;
+  let user = msg.author;
+
+  const requiredXp = Levels.xpFor(parseInt(user.level) + 1)
+  const randomAmountOfXp = Math.floor(Math.random() * 29) + 1;
+  const hasLeveledUp = await Levels.appendXp(msg.author.id, msg.guild.id, randomAmountOfXp);
+
+  if(hasLeveledUp) {
+    const user = await Levels.fetch(msg.author.id, msg.guild.id);
+    const levelEmbed = new MessageEmbed()
+    .setDescription(`**NICE JOB!** ${msg.author}, You just leveled up to level **${user.level + 1}**! Cheers!`)
+    .setColor('RANDOM')
+    msg.channel.send({embeds: [levelEmbed]});
+  }else if(msg.content.toLowerCase().startsWith(`${client.prefix}level`)){
+    const target = msg.mentions.members.first() || msg.author
+    const user = await Levels.fetch(target.id, msg.guild.id);
+    if(!user) return msg.channel.send(`It seems you don't have any exp gained yet!`);
+  
+    const levelgained = new MessageEmbed()
+    .setDescription(`**${msg.author}** is currently level ${user.level + 1}.`)
+    .setColor('RANDOM')
+
+    msg.channel.send({embeds: [levelgained]});
+  }else if(msg.content.toLowerCase().startsWith(`${client.prefix}leaderboard`)){
+      const Leaderboard = await Levels.fetchLeaderboard(msg.guild.id, 10);
+      if (Leaderboard.length < 1) return reply("Nobody's in leaderboard yet.");
+
+      const leaderboard= await Levels.computeLeaderboard(client, Leaderboard, true);
+      const lb = leaderboard.map(e => `${e.position}. ${e.username}#${e.discriminator}\nLevel: ${e.level + 1}\nXP: ${e.xp.toLocaleString()}`);
+      const leaderboardembed = new MessageEmbed()
+      .setTitle("**LEADERBOARD**")
+      .setDescription(`${lb.join("\n\n")}`)
+      .setColor('RANDOM')
+      .setTimestamp()
+
+      msg.channel.send({embeds: [leaderboardembed]});
+  }
+})
