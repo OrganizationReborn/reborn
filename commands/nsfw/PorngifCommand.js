@@ -10,13 +10,13 @@ module.exports = class PorngifCommand extends BaseCommand {
 
   async run(client, msg, args) {
     if(msg.channel.nsfw){
-      const porngif = await nsfw.porngif();
-        const porngifembed = new MessageEmbed()
+      const pgif = await nsfw.pgif();
+        const pgifembed = new MessageEmbed()
             .setTitle('Porngif Image')
             .setColor('RANDOM')
-            .setImage(porngif)
+            .setImage(pgif)
             .setTimestamp()
-        msg.channel.send({embeds: [porngifembed]});
+        msg.channel.send({embeds: [pgifembed]});
     }else{
       const porngiferror = new MessageEmbed()
         .setColor('RANDOM')
