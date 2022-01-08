@@ -14,7 +14,7 @@ module.exports = class HCommand extends BaseCommand {
       {name:"**🛡️ Moderations Commands 🛡️**",
       value:"`ban, unban, lock, unlock, clear, kick, mute, unmute, warn, nuke`"},
       {name:"**🆓 Friendly Commands 🆓**",
-      value:"`anime, meme, ping, self, weather`"},
+      value:"`anime, meme, ping, self, weather, ask`"},
       {name:"**📋 Level Commands 📋**",
       value:"`level, leaderboard`"},
       {name:"**🐱 🐶 Animal Commands 🐱 🐶**",
