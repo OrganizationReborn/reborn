@@ -6,7 +6,7 @@ module.exports = class HCommand extends BaseCommand {
     super('h', 'help', []);
   }
 
-  run(client, msg, args) {
+async run(client, msg, args) {
     const help = new MessageEmbed()
     .setTitle('🛠️ Commands 🛠️')
     .setDescription('**To see the full list: ?help**\n Add `?` before any command')

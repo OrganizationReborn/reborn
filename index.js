@@ -21,10 +21,10 @@ var xpRequired = Levels.xpFor(30);
 let ver = process.env.DISCORD_BOT_TOKEN;
 
 client.once("ready", async ()=> {
-    const guild = client.guilds.cache.get("923403835085570068");
+    const guild = client.guilds.cache.get("780975023220850688");
     setInterval(function(){
         var memberCount = guild.members.cache.filter(x => !x.user.bot).size;
-        var memberCountChannel = client.channels.cache.get("925252244415316008");
+        var memberCountChannel = client.channels.cache.get("930335274448334919");
         memberCountChannel.setName(`Total of ${memberCount} members!`);
     }, 1000);
     if(ver === "production") {
@@ -39,7 +39,7 @@ client.once("ready", async ()=> {
 });
 
 client.on('guildMemberAdd', member => {
-  let channel = member.guild.channels.cache.get('925279083594649680')
+  let channel = member.guild.channels.cache.get('930334905961947186')
   const join = new MessageEmbed()
   .setTitle("Welcome!")
   .setColor('RANDOM')
@@ -51,7 +51,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', member => {
-  let channel = member.guild.channels.cache.get('925290847082278963')
+  let channel = member.guild.channels.cache.get('930334925981364275')
   const leave = new MessageEmbed()
   .setTitle("Goodbye!")
   .setColor('RANDOM')
