@@ -19,6 +19,8 @@ async run(client, msg, args) {
       value:"`level, leaderboard`"},
       {name:"**🐱 🐶 Animal Commands 🐱 🐶**",
       value:"`cat, dog`"},
+      {name:"**⚔️ Erpg Commands ⚔️**",
+      value:"`a1-a5`"},
       {name:"**🔞 NSFW Commands 🔞**",
       value:"`nsfw`"},
     )

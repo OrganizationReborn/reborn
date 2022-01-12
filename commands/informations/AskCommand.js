@@ -11,7 +11,7 @@ async run(client, msg, args) {
       'It is certain',
       'It is decidedly so',
       'Without a doubt',
-      'Yes – definitely',
+      'Yes - definitely',
       'You may rely on it',
       'As I see it, yes',
       'Most likely',

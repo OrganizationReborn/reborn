@@ -1,6 +1,5 @@
 const BaseCommand = require('../../utils/structures/BaseCommand');
-const { MessageEmbed, Message } = require('discord.js');
-
+const { MessageEmbed } = require('discord.js');
 
 module.exports = class TestCommand extends BaseCommand {
   constructor() {
@@ -8,6 +7,6 @@ module.exports = class TestCommand extends BaseCommand {
   }
 
 async run(client, msg, args) {
-  
+    
   }
 }

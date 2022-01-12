@@ -43,7 +43,7 @@ client.on('guildMemberAdd', member => {
   const join = new MessageEmbed()
   .setTitle("Welcome!")
   .setColor('RANDOM')
-  .setDescription("<@" + member.id + ">" + " To see other channels. move to <#925208268148703262> to see rules!")
+  .setDescription("<@" + member.id + ">" + " To see other channels. move to <#930335880202293300> to get roles!")
   .setImage('https://gifimage.net/wp-content/uploads/2018/10/anime-gif-welcome.gif')
   .setTimestamp()
 
