@@ -9,6 +9,7 @@ const Levels = require("discord.js-leveling");
 Levels.setURL("mongodb+srv://reborn:09984646539@reborn.8szbn.mongodb.net/test");
 var xpRequired = Levels.xpFor(30);
 
+
 (async () => {
   client.commands = new Map();
   client.events = new Map();

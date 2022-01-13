@@ -12,11 +12,15 @@ async run(client, msg, args) {
     .setDescription('**To see the full list: ?help**\n Add `?` before any command')
     .addFields(
       {name:"**🛡️ Moderations Commands 🛡️**",
-      value:"`ban, unban, lock, unlock, clear, kick, mute, unmute, warn, nuke`"},
+      value:"`ban, unban, lock, unlock, clear, kick, mute, unmute, warn, nuke, announce, restart`"},
       {name:"**🆓 Friendly Commands 🆓**",
-      value:"`anime, meme, ping, self, weather, ask, facts`"},
+      value:"`anime, waifu, meme, ping, self, weather, ask, facts, uptime, user`"},
       {name:"**📋 Level Commands 📋**",
       value:"`level, leaderboard`"},
+      {name:"**⌨️ Useful Commands ⌨️**",
+      value:"`calculator`"},
+      {name:"**🎮 Casino Commands 🎮**",
+      value:"`daily, balance[alias: bal], work[not working properly (issue: cooldown)]`"},
       {name:"**🎲 Fun Commands 🎲**",
       value:"`roll, coinflip, joke, zodiac, urban, momma, insult, simp, topic, trump, advice, shower, iq`"},
       {name:"**🐱 🐶 Animal Commands 🐱 🐶**",
