@@ -19,6 +19,7 @@ async run(client, message, args) {
   
     
     const dailyembed = new MessageEmbed()
+    .setAuthor({iconURL: `${message.author.avatarURL()}`,name: `${message.member.user.tag}`})
     .setDescription(`you claimed ${daily.amount} for daily`)
     .setColor('RANDOM')
   

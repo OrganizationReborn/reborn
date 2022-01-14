@@ -88,7 +88,7 @@ client.on("messageCreate", async (msg) => {
     .setColor('RANDOM')
 
     msg.channel.send({embeds: [levelgained]});
-  }else if(msg.content.toLowerCase().startsWith(`${client.prefix}leaderboard`)){
+  }else if(msg.content.toLowerCase().startsWith(`${client.prefix}ranking`)){
       const Leaderboard = await Levels.fetchLeaderboard(msg.guild.id, 10);
       if (Leaderboard.length < 1) return reply("Nobody's in leaderboard yet.");
 
