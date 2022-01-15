@@ -1,7 +1,16 @@
-const { Client, Intents, MessageEmbed } = require('discord.js');
+const { Client, Intents, MessageEmbed, Collection } = require('discord.js');
 const { registerCommands, registerEvents } = require('./utils/registry');
 require('dotenv').config();
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_VOICE_STATES], partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
+const client = new Client
+({ intents: [Intents.FLAGS.GUILDS,
+ Intents.FLAGS.GUILD_MESSAGE_REACTIONS, 
+ Intents.FLAGS.GUILD_MESSAGES, 
+ Intents.FLAGS.GUILD_MEMBERS, 
+ Intents.FLAGS.GUILD_PRESENCES,
+ Intents.FLAGS.GUILD_VOICE_STATES], 
+ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
+
+
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://reborn:09984646539@reborn.8szbn.mongodb.net/test', {useUnifiedTopology: true, useNewUrlParser: true})
 
@@ -13,7 +22,7 @@ var xpRequired = Levels.xpFor(30);
 (async () => {
   client.commands = new Map();
   client.events = new Map();
-  client.prefix = "?";
+  prefix = "?";
   await registerCommands(client, '../commands');
   await registerEvents(client, '../events');
   await client.login(process.env.DISCORD_BOT_TOKEN);
@@ -31,12 +40,12 @@ client.once("ready", async ()=> {
     if(ver === "production") {
         client.user.setActivity(`in code land`, {type: "PLAYING"});
     }else{
-        client.user.setActivity(`${client.prefix}h to start`, {
+        client.user.setActivity(`${prefix}h to start`, {
             type:"PLAYING",
             status:"ONLINE"
         });
     }
-        console.log(`The prefix is ${client.prefix}`)
+        console.log(`The prefix is ${prefix}`)
 });
 
 client.on('guildMemberAdd', member => {
@@ -78,7 +87,7 @@ client.on("messageCreate", async (msg) => {
     .setDescription(`**NICE JOB!** ${msg.author}, You just leveled up to level **${user.level + 1}**! Cheers!`)
     .setColor('RANDOM')
     msg.channel.send({embeds: [levelEmbed]});
-  }else if(msg.content.toLowerCase().startsWith(`${client.prefix}level`)){
+  }else if(msg.content.toLowerCase().startsWith(`${prefix}level`)){
     const target = msg.mentions.members.first() || msg.author
     const user = await Levels.fetch(target.id, msg.guild.id);
     if(!user) return msg.channel.send(`It seems you don't have any exp gained yet!`);
@@ -88,7 +97,7 @@ client.on("messageCreate", async (msg) => {
     .setColor('RANDOM')
 
     msg.channel.send({embeds: [levelgained]});
-  }else if(msg.content.toLowerCase().startsWith(`${client.prefix}ranking`)){
+  }else if(msg.content.toLowerCase().startsWith(`${prefix}ranking`)){
       const Leaderboard = await Levels.fetchLeaderboard(msg.guild.id, 10);
       if (Leaderboard.length < 1) return reply("Nobody's in leaderboard yet.");
 

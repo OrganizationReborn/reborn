@@ -38,7 +38,7 @@ async run(client, msg, args) {
     {name:"**Example**",
     value:"`?anime, ?meme, ?ping, ?self @[user], ?weather [country], ?cat, ?dog, ?a1[-a5], ?nsfw, ?insult [@user], ?calculator [input] [sign] [input]`"},
     {name:"**Example for Moderations**",
-    value:"`?ban @[user], ?unban[@user]**(NOT RECOMMENDED)**, ?lock, ?unlock, ?clear [amount], ?kick @[user], ?mute @[user], ?unmute @[user], \n`3️⃣`?warn @[user], ?nuke`"},
+    value:"`?ban @[user], ?unban[@user]**(NOT RECOMMENDED)**, ?lock, ?unlock, ?clear [amount], ?kick @[user], ?mute @[user], ?unmute @[user], ?warn @[user], ?nuke`"},
   )
   .setColor('RANDOM')
   .setTimestamp()

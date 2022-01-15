@@ -31,6 +31,7 @@
     "ffmpeg-static": "^4.4.1",
     "fluent-ffmpeg": "^2.1.2",
     "fs": "^0.0.1-security",
+    "giveaways-for-discord": "^1.0.1",
     "humanize-duration": "^3.27.1",
     "moment": "^2.29.1",
     "mongose": "^0.0.2-security",

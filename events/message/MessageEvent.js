@@ -2,14 +2,14 @@ const BaseEvent = require('../../utils/structures/BaseEvent');
 
 module.exports = class MessageEvent extends BaseEvent {
   constructor() {
-    super('message');
+    super('messageCreate');
   }
   
   async run(client, message) {
     if (message.author.bot) return;
-    if (message.content.startsWith(client.prefix)) {
+    if (message.content.startsWith(prefix)) {
       const [cmdName, ...cmdArgs] = message.content
-      .slice(client.prefix.length)
+      .slice(prefix.length)
       .trim()
       .split(/\s+/);
       const command = client.commands.get(cmdName);
