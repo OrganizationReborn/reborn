@@ -3,13 +3,15 @@ const { registerCommands, registerEvents } = require('./utils/registry');
 require('dotenv').config();
 const client = new Client
 ({ intents: [Intents.FLAGS.GUILDS,
- Intents.FLAGS.GUILD_MESSAGE_REACTIONS, 
- Intents.FLAGS.GUILD_MESSAGES, 
- Intents.FLAGS.GUILD_MEMBERS, 
- Intents.FLAGS.GUILD_PRESENCES,
- Intents.FLAGS.GUILD_VOICE_STATES], 
+  Intents.FLAGS.GUILD_MESSAGE_REACTIONS, 
+  Intents.FLAGS.GUILD_MESSAGES, 
+  Intents.FLAGS.GUILD_MEMBERS, 
+  Intents.FLAGS.GUILD_PRESENCES,
+  Intents.FLAGS.GUILD_VOICE_STATES], 
  partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
+const { DiscordTogether } = require('discord-together')
+client.discordTogether = new DiscordTogether(client);
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://reborn:09984646539@reborn.8szbn.mongodb.net/test', {useUnifiedTopology: true, useNewUrlParser: true})

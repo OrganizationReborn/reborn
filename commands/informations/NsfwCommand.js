@@ -13,7 +13,7 @@ async run(client, msg, args) {
 		.setDescription('Only 18+ Can do this or else!')
 		.addFields(
             {name:"Real life NSFW", value:"`anal, 4k, ass, gonewild, porngif, pussy, thigh, boobs`"},
-            {name:"Anime NSFW", value:"`hentai, hentaiass, hentaimidriff, hentaithigh, erokemo, kitsune, lewd, nekofeet, nekopussy, nekotits, solo, wallpaper`"},
+            {name:"Anime NSFW", value:"`hentai, hentaiass, hentaimidriff, hentaithigh, erokemo, kitsune, lewd, nekofeet, nekopussy, nekotits, solo, wallpaper, feetgif`"},
             )
         .setColor('RANDOM')
         .setTimestamp()
