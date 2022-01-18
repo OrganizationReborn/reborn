@@ -1,0 +1,9 @@
+{
+    "Giveaway_Options" : {
+        "giveawayManagerID": "",
+        "giveawayRoleID": "",
+        "giveawayMention": "",
+        "showMention": true,
+        "hostedBy": true
+    }
+}
