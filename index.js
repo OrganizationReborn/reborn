@@ -131,13 +131,13 @@ client.giveawaysManager = new GiveawaysManager(client, {
 });
 
 client.giveawaysManager.on("giveawayReactionAdded", (giveaway, member, reaction) => {
-  console.log(`${member.user.tag} entered giveaway <#${giveaway.messageID}> (${reaction.emoji.name})`);
+  console.log(`${member.user.tag} entered giveaway #${giveaway.messageId}`);
 });
 
 client.giveawaysManager.on("giveawayReactionRemoved", (giveaway, member, reaction) => {
-  console.log(`${member.user.tag} unreact to giveaway <#${giveaway.messageID}> (${reaction.emoji.name})`);
+  console.log(`${member.user.tag} unreact to giveaway #${giveaway.messageId}`);
 });
 
 client.giveawaysManager.on("giveawayEnded", (giveaway, winners) => {
-  console.log(`Giveaway <#${giveaway.messageID}> ended! Winners: ${winners.map((member) => member.user.username).join(', ')}`);
+  console.log(`Giveaway #${giveaway.messageId} ended! Winners: ${winners.map((member) => member.user.username).join(', ')}`);
 });

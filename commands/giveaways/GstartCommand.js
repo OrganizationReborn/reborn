@@ -11,12 +11,12 @@ async run(client, message, args) {
     const { MessageEmbed } = require('discord.js');
 
     if (config["Giveaway_Options"].giveawayManagerID) {
-     if (!message.member.permissions.has('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.id === config["Giveaway_Options"].giveawayManagerID)) {
-         return message.channel.send(':boom: You need to have the \`MANAGE_MESSAGES\` permissions to start giveaways.');
+     if (!message.member.permissions.has('ADMINISTRATOR') && !message.member.roles.cache.some((r) => r.id === config["Giveaway_Options"].giveawayManagerID)) {
+         return message.channel.send(':boom: You need to have the \`ADMINISTRATOR\` permissions to start giveaways.');
      }
     } else {
-     if (!message.member.permissions.has('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")) {
-         return message.channel.send(':boom: You need to have the \`MANAGE_MESSAGES\` permissions to start giveaways.');
+     if (!message.member.permissions.has('ADMINISTRATOR') && !message.member.roles.cache.some((r) => r.name === "Giveaways")) {
+         return message.channel.send(':boom: You need to have the \`ADMINISTRATOR\` permissions to start giveaways.');
      }
     }
     
