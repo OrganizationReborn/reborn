@@ -14,7 +14,7 @@ async run(client, msg, args) {
     {name:"**🛡️ Moderations Commands 🛡️**",
     value:"`ban, unban, lock, unlock, clear, kick, mute, unmute, warn, nuke, announce, restart, hack`"},
     {name:"**🆓 Friendly Commands 🆓**",
-    value:"`anime, waifu, meme, ping, self, weather, ask, facts, uptime, user, afk`"},
+    value:"`anime, waifu, meme, ping, self, weather, ask, facts, uptime, user, afk, kpop`"},
     {name:"**📋 Level Commands 📋**",
     value:"`level, ranking`"},
     {name:"**🎉 Giveaways Commands `ONLY ADMIN CAN ACCESS`🎉**",
