@@ -141,3 +141,26 @@ client.giveawaysManager.on("giveawayReactionRemoved", (giveaway, member, reactio
 client.giveawaysManager.on("giveawayEnded", (giveaway, winners) => {
   console.log(`Giveaway #${giveaway.messageId} ended! Winners: ${winners.map((member) => member.user.username).join(', ')}`);
 });
+
+/* Weblink blocked */
+
+client.on("messageCreate", message => {
+let user = message.author.id
+if (message.content.includes("https://")) {
+    console.log("deleted " + message.content + " from " + message.author)
+    message.delete();
+    message.channel.send(`No links here, <@${user}>`)
+  }
+if (message.content.includes("http://")) {
+    console.log("deleted " + message.content + " from " + message.author)
+    message.delete();
+    message.channel.send(`No links here, <@${user}>`)
+  }
+if (message.content.includes("www.")) {
+    console.log("deleted " + message.content + " from " + message.author)
+    message.delete();
+    message.channel.send(`No links here, <@${user}>`)
+  }
+});
+
+/* Music Command */
