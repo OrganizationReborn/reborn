@@ -41,7 +41,7 @@ module.exports = class MessageEvent extends BaseEvent {
         const afkadd = new MessageEmbed()
         .setColor('RANDOM')
         .setTimestamp()
-        .setDescription("<@" + member.user + `>, is in AFK mode for: **${reason}**`)
+        .setDescription("<@" + member.user + `>, is in AFK mode`)
         if(afkProfile) message.channel.send({embeds: [afkadd]});
       });
     }
