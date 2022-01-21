@@ -1,5 +1,5 @@
 const BaseEvent = require('../../utils/structures/BaseEvent');
-const afk = require('../../../afkSchema');
+const afk = require('../../afkSchema');
 const { MessageEmbed } = require('discord.js');
 
 module.exports = class MessageEvent extends BaseEvent {

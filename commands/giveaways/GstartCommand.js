@@ -1,5 +1,5 @@
 const BaseCommand = require('../../utils/structures/BaseCommand');
-const config = require('../../../config.json');
+const config = require('../../config.json');
 const ms = require('ms');
 
 module.exports = class GstartCommand extends BaseCommand {

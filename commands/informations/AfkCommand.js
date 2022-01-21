@@ -1,5 +1,5 @@
 const BaseCommand = require('../../utils/structures/BaseCommand');
-const afk = require('../../../afkSchema');
+const afk = require('../../afkSchema');
 const mongoose = require('mongoose');
 
 module.exports = class AfkCommand extends BaseCommand {
