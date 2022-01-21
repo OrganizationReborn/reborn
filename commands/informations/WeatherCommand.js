@@ -18,7 +18,7 @@ module.exports = class WeatherCommand extends BaseCommand {
 
       const weatherinfo = new MessageEmbed()
       .setDescription(`**${current.skytext}**`)
-      .setAuthor(`Weather forecast for ${current.observationpoint}`)
+      .setAuthor({text: `Weather forecast for ${current.observationpoint}`})
       .setThumbnail(current.imageUrl)
       .setColor('#ff0000')
       .addField('Timezone', `UTC${location.timezone}`, true)

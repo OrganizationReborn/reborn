@@ -17,7 +17,7 @@ const { MessageEmbed, Util } = require('discord.js');
 
     const embed = new MessageEmbed()
     .setTitle(kpop.name)
-    .setDescription(`From: **${kpop.group}**`)
+    .setDescription(`Group: **${kpop.group}**`)
     .setImage(kpop.image)
     .setFooter({text: `Kpop Number Request: ${random}`})
     .setColor('RANDOM')

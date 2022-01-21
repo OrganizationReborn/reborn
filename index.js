@@ -117,7 +117,6 @@ client.on("messageCreate", async (msg) => {
 
 /* Giveaway Commands */
 
-const config = require('./config.json');
 const { GiveawaysManager } = require('discord-giveaways');
 
 client.giveawaysManager = new GiveawaysManager(client, {

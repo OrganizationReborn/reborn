@@ -11,6 +11,6 @@ async run(client, message, args) {
 //if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send("You can't use this command.");
 //if(!message.guild.me.permissions.has("ADMINISTRATOR")) return message.channel.send("My role does not have the manage channels permission");
   const { MessageEmbed, Util } = require('discord.js');
-
+  
   }
 }
