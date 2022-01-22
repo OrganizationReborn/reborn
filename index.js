@@ -164,8 +164,8 @@ if (message.content.includes("www.")) {
 
 client.on('messageCreate', message => {
   if(message.content.toLowerCase().startsWith(`${prefix}kiss`)) {
-    let mention = message.mentions.username.first();
-    let title = message.author.username + "kissed" + mention;
+    let mention = message.mentions.users.first().username;
+    let title = message.author.username + " kissed " + mention;
 
     const kissed = new MessageEmbed()
     .setTitle(title)
