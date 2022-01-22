@@ -162,4 +162,17 @@ if (message.content.includes("www.")) {
   }
 });
 
-/* Music Command */
+client.on('messageCreate', message => {
+  if(message.content.toLowerCase().startsWith(`${prefix}kiss`)) {
+    let mention = message.mentions.users.first();
+    let title = message.author.username + "kissed" + mention;
+
+    const kissed = new MessageEmbed()
+    .setTitle(title)
+    .setDescription('https://imgur.com/gallery/2HitdsF')
+    .setColor('RANDOM')
+    .setTimestamp()
+
+    message.channel.send({embeds: [kissed]})
+  }
+})
