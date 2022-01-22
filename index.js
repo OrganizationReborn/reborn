@@ -164,12 +164,15 @@ if (message.content.includes("www.")) {
 
 client.on('messageCreate', message => {
   if(message.content.toLowerCase().startsWith(`${prefix}kiss`)) {
-    let mention = message.mentions.users.first().username;
-    let title = message.author.username + " kissed " + mention;
+
+    const user = message.mentions.users.first();
+    if(user === undefined) {
+      return message.reply('Are you going to kiss an air? How creepy. `?kiss @user`')
+    }
 
     const kissed = new MessageEmbed()
-    .setTitle(title)
-    .setImage('https://www.google.com/url?sa=i&url=https%3A%2F%2Fimgur.com%2Fgallery%2F2HitdsF&psig=AOvVaw0QSsvqLrF1Ox41gvATVbu3&ust=1642949120147000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCKj72rrMxfUCFQAAAAAdAAAAABAQ')
+    .setTitle(message.author.username + " kissed " + user)
+    .setImage('https://i.imgur.com/WVSwvm6.gif')
     .setColor('RANDOM')
     .setTimestamp()
 
