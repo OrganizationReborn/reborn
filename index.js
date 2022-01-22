@@ -169,7 +169,7 @@ client.on('messageCreate', message => {
 
     const kissed = new MessageEmbed()
     .setTitle(title)
-    .setDescription('https://imgur.com/gallery/2HitdsF')
+    .setImage('https://imgur.com/gallery/2HitdsF')
     .setColor('RANDOM')
     .setTimestamp()
 
