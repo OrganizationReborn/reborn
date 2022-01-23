@@ -10,14 +10,14 @@ async run(client, message, args) {
     const user = message.mentions.users.first().username;
     if(user === undefined) {
       return message.reply('Are you going to kiss an air? How creepy. `?kiss @user`')
+    } else {
+      const kissed = new MessageEmbed()
+      .setTitle(message.author.username + " kissed " + user)
+      .setImage('https://i.imgur.com/WVSwvm6.gif')
+      .setColor('RANDOM')
+      .setTimestamp()
+  
+      message.channel.send({embeds: [kissed]})
     }
-
-    const kissed = new MessageEmbed()
-    .setTitle(message.author.username + " kissed " + user)
-    .setImage('https://i.imgur.com/WVSwvm6.gif')
-    .setColor('RANDOM')
-    .setTimestamp()
-
-    message.channel.send({embeds: [kissed]})
   }
 }
