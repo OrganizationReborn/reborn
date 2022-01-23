@@ -12,7 +12,7 @@ async run(client, message, args) {
     const total = Object.keys(bullies).length
     if(user === undefined) {
       return message.reply('Are you going to bully an air? How creepy. `?bully @user`')
-    } else {
+    } 
       let somethingThere = message.content.split(/\s+/g).slice(1).join(" ");
       if(!somethingThere || args.number == 'none'){
         var random = Math.floor(Math.random() * total + 1);
@@ -27,7 +27,6 @@ async run(client, message, args) {
       .setTimestamp()
   
       message.channel.send({embeds: [kissed]})
-      }
     }
   }
 }
