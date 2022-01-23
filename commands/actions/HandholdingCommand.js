@@ -3,13 +3,13 @@ const { MessageEmbed, Message } = require('discord.js');
 
 module.exports = class KissCommand extends BaseCommand {
     constructor() {
-        super('kiss', 'actions', []);
+        super('handholding', 'actions', []);
     }
 
 async run(client, message, args) {
     const user = message.mentions.users.first();
     if(user === undefined) {
-      return message.reply('Are you going to bite an air? How creepy. `?handholding @user`')
+      return message.reply('Are you going to holding hands with air? How creepy. `?handholding @user`')
     } else {
       const member = message.mentions.users.first().username
       const kissed = new MessageEmbed()

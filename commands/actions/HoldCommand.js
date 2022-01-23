@@ -9,7 +9,7 @@ module.exports = class HoldCommand extends BaseCommand {
 async run(client, message, args) {
     const user = message.mentions.users.first();
     if(user === undefined) {
-      return message.reply('Are you going to bite an air? How creepy. `?hold @user`')
+      return message.reply('Are you going to hold air? How creepy. `?hold @user`')
     } else {
       const member = message.mentions.users.first().username
       const holded = new MessageEmbed()

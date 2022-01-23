@@ -9,7 +9,7 @@ module.exports = class TickleCommand extends BaseCommand {
 async run(client, message, args) {
     const user = message.mentions.users.first();
     if(user === undefined) {
-      return message.reply('Are you going to bite an air? How creepy. `?tickle @user`')
+      return message.reply('Are you going to tickle an air? How creepy. `?tickle @user`')
     } else {
       const member = message.mentions.users.first().username
       const kissed = new MessageEmbed()

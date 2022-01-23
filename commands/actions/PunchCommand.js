@@ -9,7 +9,7 @@ module.exports = class PunchCommand extends BaseCommand {
 async run(client, message, args) {
     const user = message.mentions.users.first();
     if(user === undefined) {
-      return message.reply('Are you going to bite an air? How creepy. `?punch @user`')
+      return message.reply('Are you going to punch an air? How creepy. `?punch @user`')
     } else {
       const member = message.mentions.users.first().username
       const kissed = new MessageEmbed()

@@ -9,7 +9,7 @@ module.exports = class KillCommand extends BaseCommand {
 async run(client, message, args) {
     const user = message.mentions.users.first();
     if(user === undefined) {
-      return message.reply('Are you going to bite an air? How creepy. `?kill @user`')
+      return message.reply('Are you going to kill an air? How creepy. `?kill @user`')
     } else {
       const member = message.mentions.users.first().username
       const kissed = new MessageEmbed()

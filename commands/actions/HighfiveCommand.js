@@ -9,7 +9,7 @@ module.exports = class HighfiveCommand extends BaseCommand {
 async run(client, message, args) {
     const user = message.mentions.users.first();
     if(user === undefined) {
-      return message.reply('Are you going to highfive an air? How creepy. `?highfive @user`')
+      return message.reply('Are you going to highfive to an air? How creepy. `?highfive @user`')
     }
     const member = message.mentions.users.first().username;
     const kissed = new MessageEmbed()

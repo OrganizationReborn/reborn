@@ -14,7 +14,7 @@ async run(client, message, args) {
       const member = message.mentions.users.first().username
       const kissed = new MessageEmbed()
       .setTitle(message.author.username + ` licked ` + member)
-      .setImage('https://i.imgur.com/r9aU2xv.gif')
+      .setImage('https://c.tenor.com/bgGMTIJhEvEAAAAC/anime-lick-lick.gif')
       .setColor('RANDOM')
       .setTimestamp()
   
