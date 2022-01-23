@@ -14,7 +14,7 @@ async run(client, message, args) {
       return message.reply('Are you going to kiss an air? How creepy. `?kiss @user`')
     } else {
       const kissed = new MessageEmbed()
-      .setTitle(message.author.username + ` kissed ` + member)
+      .setTitle(message.author.username + ` kissed ` + `<@${member}>`)
       .setImage('https://i.imgur.com/WVSwvm6.gif')
       .setColor('RANDOM')
       .setTimestamp()
