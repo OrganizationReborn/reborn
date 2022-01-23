@@ -7,8 +7,9 @@ module.exports = class KissCommand extends BaseCommand {
     }
 
 async run(client, message, args) {
+    const username = message.mentions.username();
     const user = message.mentions.users.first().username;
-    if(user === undefined) {
+    if(username === undefined) {
       return message.reply('Are you going to kiss an air? How creepy. `?kiss @user`')
     } else {
       const kissed = new MessageEmbed()
