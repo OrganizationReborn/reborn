@@ -1,20 +1,20 @@
 const BaseCommand = require('../../utils/structures/BaseCommand');
 const { MessageEmbed, Message } = require('discord.js');
 
-module.exports = class KissCommand extends BaseCommand {
+module.exports = class NomCommand extends BaseCommand {
     constructor() {
-        super('kiss', 'actions', []);
+        super('nom', 'actions', []);
     }
 
 async run(client, message, args) {
     const user = message.mentions.users.first();
     if(user === undefined) {
-      return message.reply('Are you going to kiss an air? How creepy. `?kiss @user`')
+      return message.reply('Are you going to nom an air? How creepy. `?nom @user`')
     } else {
       const member = message.mentions.users.first().username
       const kissed = new MessageEmbed()
-      .setTitle(message.author.username + ` kissed ` + member)
-      .setImage('https://c.tenor.com/bgGMTIJhEvEAAAAS/anime-lick-lick.gif')
+      .setTitle(message.author.username + ` nom ` + member)
+      .setImage('https://c.tenor.com/6mvKb4vf0SoAAAAC/wholesome-nom-nom-nom-nom.gif')
       .setColor('RANDOM')
       .setTimestamp()
   
