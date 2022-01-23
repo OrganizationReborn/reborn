@@ -14,7 +14,7 @@ async run(client, message, args) {
       const member = message.mentions.users.first().username
       const kissed = new MessageEmbed()
       .setTitle(message.author.username + ` bullied ` + member)
-      .setImage('https://c.tenor.com/JMRAWJgcfF0AAAAM/nagatoro-ijirinaide-nagatoro-san.git')
+      .setImage('https://c.tenor.com/WK3t25D8fhgAAAAM/bully-mean.gif')
       .setColor('RANDOM')
       .setTimestamp()
   
