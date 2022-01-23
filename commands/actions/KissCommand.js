@@ -7,14 +7,12 @@ module.exports = class KissCommand extends BaseCommand {
     }
 
 async run(client, message, args) {
-    //const username = message.member.user.tag;
-    const member = message.mentions.user.first();
-    const user = message.mentions.members.first();
+    const user = message.mentions.users.first();
     if(user === undefined) {
       return message.reply('Are you going to kiss an air? How creepy. `?kiss @user`')
     } else {
       const kissed = new MessageEmbed()
-      .setTitle(message.author.username + ` kissed ` + `${member}`)
+      .setDescription(message.author.username + ` kissed ` + user)
       .setImage('https://i.imgur.com/WVSwvm6.gif')
       .setColor('RANDOM')
       .setTimestamp()
