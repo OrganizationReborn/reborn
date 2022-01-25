@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = class NekotitsCommand extends BaseCommand {
   constructor() {
-    super('nekotits', 'hentai', []);
+    super('nekotits', 'hentai', ['nt']);
   }
 
   async run(client, msg, args) {

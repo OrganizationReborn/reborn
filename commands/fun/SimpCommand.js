@@ -12,10 +12,11 @@ async run(client, message, args) {
       var options = { min: 0, max: 100, integer: true }
       let SimpRate = randomnumber(options) + "%";
   
-      let Message = message.author.username + " is " + SimpRate + " simp";
-      if (message.mentions.users.first()) {
-        Message = message.mentions.users.first().username + " is " + SimpRate + " simp";
+      const user = message.mentions.users.first();
+      if(user === undefined) {
+        return message.reply('Do you think someone is simping you? Try to use this `?simp @user`');
       }
+        const Message = message.mentions.users.first().username + " is simping " + message.author.username + " " + SimpRate;
         const simp = new MessageEmbed()
         .setTitle('Simp Machine')
         .setDescription(Message)
@@ -23,7 +24,7 @@ async run(client, message, args) {
         .setFooter({text: 'Requested by ' + message.author.tag})
         .setTimestamp()
   
-        message.channel.send({embeds: [simp]});
+        return message.reply({embeds: [simp]});
     }
     catch (err) {
       console.log(err);

@@ -2,7 +2,7 @@ const BaseCommand = require('../../utils/structures/BaseCommand');
 
 module.exports = class FeetgifCommand extends BaseCommand {
   constructor() {
-    super('feetgif', 'hentai', []);
+    super('feetgif', 'hentai', ['fg']);
   }
 
 async run(client, message, args) {

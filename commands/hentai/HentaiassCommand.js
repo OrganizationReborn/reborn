@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = class HentaiassCommand extends BaseCommand {
   constructor() {
-    super('hentaiass', 'hentai', []);
+    super('hentaiass', 'hentai', ['ha']);
   }
 
   async run(client, msg, args) {

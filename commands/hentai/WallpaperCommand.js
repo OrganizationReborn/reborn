@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = class WallpaperCommand extends BaseCommand {
   constructor() {
-    super('wallpaper', 'hentai', []);
+    super('wallpaper', 'hentai', ['wp']);
   }
 
   async run(client, msg, args) {

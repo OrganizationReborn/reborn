@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = class NekofeetCommand extends BaseCommand {
   constructor() {
-    super('nekofeet', 'hentai', []);
+    super('nekofeet', 'hentai', ['nf']);
   }
 
   async run(client, msg, args) {

@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = class PorngifCommand extends BaseCommand {
   constructor() {
-    super('porngif', 'nsfw', []);
+    super('porngif', 'nsfw', ['pgif']);
   }
 
   async run(client, msg, args) {

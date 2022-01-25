@@ -4,7 +4,7 @@ const { MessageEmbed, Message } = require('discord.js');
 
 module.exports = class KissCommand extends BaseCommand {
     constructor() {
-        super('handholding', 'actions', []);
+        super('handholding', 'actions', ['hh']);
     }
 
 async run(client, message, args) {

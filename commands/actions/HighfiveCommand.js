@@ -4,7 +4,7 @@ const { MessageEmbed, Message } = require('discord.js');
 
 module.exports = class HighfiveCommand extends BaseCommand {
     constructor() {
-        super('highfive', 'actions', []);
+        super('highfive', 'actions', ['hf']);
     }
 
 async run(client, message, args) {

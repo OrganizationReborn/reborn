@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = class HentaimidriffCommand extends BaseCommand {
   constructor() {
-    super('hentaimidriff', 'hentai', []);
+    super('hentaimidriff', 'hentai', ['hm']);
   }
 
   async run(client, msg, args) {

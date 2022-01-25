@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = class GonewildCommand extends BaseCommand {
   constructor() {
-    super('gonewild', 'nsfw', []);
+    super('gonewild', 'nsfw', ['gw']);
   }
 
   async run(client, msg, args) {
