@@ -15,6 +15,8 @@ async run(client, msg, args) {
     value:"`ban, unban, lock, unlock, clear, kick, mute, unmute, warn, nuke, announce, restart, hack`"},
     {name:"**🆓 Friendly Commands 🆓**",
     value:"`manga, anime, waifu, meme, ping, self, weather, ask, facts, uptime, user, afk, kpop`"},
+    {name:"**🤗 Action Commands 🤗**",
+    value:"`bite, boop, bully, cuddle, greet, handholding, highfive, hold, hug, kill, kiss, lick, nom, pat, poke, punch, slap, snuggle, stare, tickle, wave`"},
     {name:"**📋 Level Commands 📋**",
     value:"`level, ranking`"},
     {name:"**🎉 Giveaways Commands `ONLY ADMIN CAN ACCESS`🎉**",
