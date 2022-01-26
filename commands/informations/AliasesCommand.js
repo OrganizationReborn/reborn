@@ -12,6 +12,7 @@ async run(client, message, args) {
     .setTitle('Aliases')
     .addFields(
         {name:"Action Command", value:"`Handholding = hh, Highfive = hf`"},
+        {name:"Translator Command", value:"`teng, tfil, tjap, tkor`"},
         {name:"NSFW Commands", value:"`fg, ha, hm, ht, nf, np, nt, wp, gw, pg`"}
     )
     .setColor('RANDOM')
