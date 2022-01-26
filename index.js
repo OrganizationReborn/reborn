@@ -145,21 +145,37 @@ client.giveawaysManager.on("giveawayEnded", (giveaway, winners) => {
 
 client.on("messageCreate", message => {
 let user = message.author.id
-if (message.content.includes("https://")) {
+if (message.content.includes("https://discord.gg")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete();
     message.channel.send(`No links here, <@${user}>`)
   }
-if (message.content.includes("http://")) {
+if (message.content.includes("http://discord.gg")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete();
     message.channel.send(`No links here, <@${user}>`)
   }
-if (message.content.includes("www.")) {
+if (message.content.includes("www.discord.gg")) {
     console.log("deleted " + message.content + " from " + message.author)
     message.delete();
     message.channel.send(`No links here, <@${user}>`)
   }
+if (message.content.includes("www.discord.gift")) {
+    console.log("deleted " + message.content + " from " + message.author)
+    message.delete();
+    message.channel.send(`No links here, <@${user}>`)
+}
+if (message.content.includes("https://discord.gift")) {
+  console.log("deleted " + message.content + " from " + message.author)
+  message.delete();
+  message.channel.send(`No links here, <@${user}>`)
+}
+if (message.content.includes("http://discord.gift")) {
+  console.log("deleted " + message.content + " from " + message.author)
+  message.delete();
+  message.channel.send(`No links here, <@${user}>`)
+}
+
 });
 
 
