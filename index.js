@@ -177,3 +177,4 @@ if (message.content.includes("http://discord.gift")) {
 }
 
 });
+
