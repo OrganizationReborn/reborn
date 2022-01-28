@@ -2,7 +2,7 @@ const BaseCommand = require('../../utils/structures/BaseCommand');
 
 module.exports = class RussianrouletteCommand extends BaseCommand {
   constructor() {
-    super('russianroulette', 'fun', ['rr']);
+    super('russianroulette', 'minigames', ['rr']);
   }
 
   run(client, message, args) {
