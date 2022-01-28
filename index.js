@@ -79,7 +79,6 @@ client.on("messageCreate", async (msg) => {
   if(msg.author.bot) return;
   let user = msg.author;
 
-  const requiredXp = Levels.xpFor(parseInt(user.level) + 1)
   const randomAmountOfXp = Math.floor(Math.random() * 29) + 1;
   const hasLeveledUp = await Levels.appendXp(msg.author.id, msg.guild.id, randomAmountOfXp);
 
@@ -178,3 +177,20 @@ if (message.content.includes("http://discord.gift")) {
 
 });
 
+/*client.on('messageCreate', message => {
+  if(message.content.toLowerCase().startsWith(`${prefix}role`)) {
+    const embed = new MessageEmbed()
+    .setTitle('ROLE LIST #1')
+    .setDescription("**Get your Roles here to access some hidden channels**\n1️⃣: EPIC RPG\n2️⃣: POKEMEOW\n3️⃣: POKETWO\n4️⃣: DANK MEMER\n5️⃣: SLOT BOT\n6️⃣: ONE PIECE\n7️⃣: OWO\n\n**Extra roles for hidden channels**\n8️⃣: GIVEAWAYS\n9️⃣: REBORN TESTERS\n🔟: EPIC GUIDE")
+    .setTimestamp()
+    .setColor('RANDOM')
+
+    message.channel.send({embeds: [embed]});
+  }
+})*/
+
+client.on('messageCreate', msg => {
+  if(msg.content.includes("docs")) {
+      return msg.reply({content: "if you're looking some of it, more to come soon"});
+  }
+});
