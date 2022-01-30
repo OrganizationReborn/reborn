@@ -360,14 +360,4 @@ if (message.content.includes("http://discord.gift")) {
 
     message.channel.send({embeds: [embed]});
   }
-<<<<<<< HEAD
 })*/
-=======
-})*/
-
-client.on('messageCreate', msg => {
-  if(msg.content.includes("docs")) {
-      return msg.reply({content: "if you're looking some of it, more to come soon"});
-  }
-});
->>>>>>> c807b9f1be9979e622f1fb631367849fdb1ea2ba
