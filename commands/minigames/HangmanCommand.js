@@ -18,10 +18,8 @@ async run(client, message, args) {
     var wordsrandom = words[random];
     const word = wordsrandom.hangman
 
-    if(!channel) return message.channel.send('You need to specify a channel. `?hangman <channel> <word>`')
-    const word = args.slice(1).join(" ")
-    if(!word) return  message.channel.send('You need to specify a word. `?hangman <channel> <word>`')
-    
+    if(!channel) return message.channel.send('You need to specify a channel. `?hangman <channel>`')
+  
     const hang = new hangman({
         message: message,
         word: word,
