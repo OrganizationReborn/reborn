@@ -14,7 +14,7 @@ async run(client, msg, args) {
       {name:"**🛡️ Moderations Commands 🛡️**",
       value:"`ban, unban, lock, unlock, clear, kick, mute, unmute, warn, nuke, announce, restart, hack`"},
       {name:"**🆓 Friendly Commands 🆓**",
-      value:"`manga, aliases, anime, waifu, meme, ping, self, weather, ask, facts, uptime, user, afk, kpop`"},
+      value:"`manga, translator, aliases, anime, waifu, meme, ping, self, weather, ask, facts, uptime, user, afk, kpop`"},
       {name:"**🙂 Emotes 🙂**",
       value:"`blush, cry, dance, deredere, grin, happy, lewd, pout, scoff, shrug, sleepy, smile, smug, teehee, thinking, thonking, thumbsup, triggered, wag`"},
       {name:"**🤗 Action Commands 🤗**",

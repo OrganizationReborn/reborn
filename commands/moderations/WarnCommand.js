@@ -6,15 +6,19 @@ module.exports = class WarnCommand extends BaseCommand {
   }
 
   run(client, msg, args) {
+    const user = msg.mentions.users.first()
     if(!msg.member.permissions.has("ADMINISTRATOR")) return msg.channel.send("You can't use this command.");
         if(!msg.guild.me.permissions.has("ADMINISTRATOR")) return msg.channel.send("My role does not have the manage channels permission");
         
-        const user = msg.mentions.users.first()
+        if(user === undefined) {
+          return msg.reply('To warn someone. use ?warn @user');
+        } else {
         const warningEmbed = new MessageEmbed()
         .setTitle("⚠️ Warning! ⚠️")
         .setColor("RANDOM")
         .setDescription('You have been warned! \n' + "<@" + user.id + ">")
         .setTimestamp()
         msg.channel.send({embeds: [warningEmbed]});
+        }  
   }
 }

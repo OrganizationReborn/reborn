@@ -1,5 +1,5 @@
 const BaseCommand = require('../../utils/structures/BaseCommand');
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed, Message } = require('discord.js');
 
 module.exports = class KickCommand extends BaseCommand {
   constructor() {
@@ -8,10 +8,11 @@ module.exports = class KickCommand extends BaseCommand {
 
 async run(client, msg, args) {
     const user = msg.mentions.users.first();
-        if(user){
-            if(!msg.member.permissions.has("KICK_MEMBERS")) return msg.channel.send("You can't use this command.");
-            if(!msg.guild.me.permissions.has("KICK_MEMBERS")) return msg.channel.send("My role does not have the manage channels permission");
-
+    if(!msg.member.permissions.has("KICK_MEMBERS")) return msg.channel.send("You can't use this command.");
+    if(!msg.guild.me.permissions.has("KICK_MEMBERS")) return msg.channel.send("My role does not have the manage channels permission");
+        if(user === undefined){
+            return msg.reply('You must state someone to kick. `\?kick @user\`');
+        } else {
             const member = msg.guild.members.resolve(user);
             if(member){
                 member
@@ -40,5 +41,6 @@ async run(client, msg, args) {
                     })
             }
         }
+
   }
 }
