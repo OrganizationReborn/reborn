@@ -1,0 +1,41 @@
+{
+    "1" : {
+        "hangman" : "satisfied"
+    },
+
+    "2" : {
+        "hangman" : "modified"
+    },
+
+    "3" : {
+        "hangman" : "initial"
+    },
+
+    "4" : {
+        "hangman" : "random"
+    },
+
+    "5" : {
+        "hangman" : "floor"
+    },
+
+    "6" : {
+        "hangman" : "join"
+    },
+
+    "7" : {
+        "hangman" : "slice"
+    },
+
+    "8" : {
+        "hangman" : "wife"
+    },
+
+    "9" : {
+        "hangman" : "reborn"
+    },
+
+    "10" : {
+        "hangman" : "senior"
+    }
+}

@@ -26,7 +26,6 @@ async run(client, message, args) {
   ]
   
   let somethingThere = message.content.split(/\s+/g).slice(1).join(" ");
-  const percentage = Math.random()
   if (!somethingThere || args.number == 'none') {
       var random = Math.floor(Math.random() * total + 1);
       var waifu = waifus[random];
@@ -42,23 +41,6 @@ async run(client, message, args) {
       await ms.react('👎');
   
       return null;
-  
-  } else if (somethingThere) {
-      const waifuNumber = args.number
-      var waifu = waifus[waifuNumber]
-      const embed = new MessageEmbed()
-          .setDescription(waifu.origin)
-          .setImage(waifu.image)
-          .setFooter({text: `Waifu Number ${waifuNumber}`})
-          .setColor('RANDOM');
-      var ms = await message.channel.send(`💝 Here's waifu number **${waifuNumber}**!`, { embeds: [embed] });
-      await ms.react('👍');
-      await ms.react('👎');
-  
-      return null;
-  
-  } else if (percentage < 0.05) {
-      return message.channel.send(weefi[Math.round(Math.random() * (weefi.length - 1))])
-  }
+    } 
   }
 }
